@@ -19,3 +19,4 @@ docker run --env-file PATH_TO_YOUR_LOCAL_VARIABLES.LIST-FILE -v PATH_TO_A_LOCAL_
 
 e.g. docker run --env-file smartchecksecurityposture_variables.list -v /Users/john_doe/projects/smartCheckSecurityPosture:/outvol smartchecksecurityposture:latest
 
+For an example of a `smartchecksecurityposture_variables.list`, see `smartchecksecurityposture_variables.list.sample`
