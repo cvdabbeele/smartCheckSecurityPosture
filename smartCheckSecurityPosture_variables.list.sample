@@ -1,0 +1,15 @@
+# YOUR SMARTCHECK PARAMETERS
+# DSSC_HOST IP_OR_URL_OF_YOUR_SMARTCHECK    #no trailing slash (!)
+DSSC_HOST=https://IP_OR_URL_OF_YOUR_SMARTCHECK 
+DSSC_USERNAME=YOUR_SMARTCHECK_USERNAME
+DSSC_PASSWORD=YOUR_SMARTCHECK_PASSWORD
+
+# NUMBEROFBATCHES  scanresults are pulled by batches of 25
+NUMBEROFBATCHES=3   # as an example
+
+# OUTFILE the csv file that will hold the scanresult-overviews
+# this is just the filename.  
+# The path is defined at runtime by the volume mapping (-v)
+# if OUTFILE is omitted, then outfiles will be created in the format of 
+# scanfindings_YYYMMMDDD_HH:MM
+#OUTFILE=outputfile.csv   
