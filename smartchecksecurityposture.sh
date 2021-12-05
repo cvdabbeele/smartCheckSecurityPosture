@@ -17,7 +17,7 @@ BEARERTOKEN=$(curl -k -s --location --insecure --request POST ${DSSC_HOST}'/api/
 
 # Get the last batches of critical scanresults of images
 #--------------------------------------------------------
-printf "%s\n"  "image, malware, criticalContents, criticalVulnerabilities, criticalChecklists" > /outvol/${OUTFILE}
+printf "%s\n"  "scandate, image, malware, criticalContents, criticalVulnerabilities, criticalChecklists" > /outvol/${OUTFILE}
 NUMBEROFBATCHES=$((${NUMBEROFBATCHES}))  #ensure this is a number
 LOOPS=$((${NUMBEROFBATCHES})) 
 NEXT="something"
@@ -37,7 +37,7 @@ while [ $LOOPS -gt 0 ] && [ ${NEXT} != "null" ];do
     --header 'Content-Type: application/json' \
     --header 'Api-Version: 2018-05-01' \
     --header 'Authorization: Bearer'${BEARERTOKEN}  \
-    | jq -r ' [.name, .findings.malware, .findings.contents.total.critical,.findings.vulnerabilities.total.critical, .findings.checklists.total.critical ] | @csv'  >>/outvol/${OUTFILE}
+    | jq -r ' [.details.completed, .name, .findings.malware, .findings.contents.total.critical,.findings.vulnerabilities.total.critical, .findings.checklists.total.critical ] | @csv'  >>/outvol/${OUTFILE}
   done
   printf '\n'
   ((LOOPS--))
