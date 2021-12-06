@@ -1,5 +1,5 @@
 # smartCheckSecurityPosture
-Creates a CSV file with Critical Scan Findings fonud by your SmartCheck's scans
+Creates a CSV file with Critical Scan Findings found by your SmartCheck's scans
 
 ## Clone this repo
 ```
