@@ -24,6 +24,8 @@ For an example of a `smartchecksecurityposture_variables.list`, see `smartchecks
 ## Open the CSV in Excel
 ![scanFindings](images/scanFindings.png) 
 
+## Trending
+To see trending, sort the Excel file on `Image` (A-Z) then on `ScanDate` (Z-A)
 
 ## Disclaimer
 This tool is provided as Open Source.
